@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Convert</string>
+    <string-array name="cur">
+        <item>Доллар</item>
+        <item>Рубль</item>
+        <item>Фунт</item>
+    </string-array>
+</resources>
