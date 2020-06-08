@@ -3,6 +3,7 @@
     <string-array name="cur">
         <item>Доллар</item>
         <item>Рубль</item>
+        <item>Евро</item>
         <item>Фунт</item>
     </string-array>
 </resources>
