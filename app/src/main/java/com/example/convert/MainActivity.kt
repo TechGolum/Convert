@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
         var nums_cur = arrayOf("Доллар", "Рубль", "Евро", "Фунт")
         var curs : MutableMap<String, Array<Double>> = mutableMapOf()
         curs[nums_cur[0]] = arrayOf(1.0, 74.0, 0.89, 0.79)
-        curs[nums_cur[1]] = arrayOf(0.01, 1.0, 0.01, 87.0)
+        curs[nums_cur[1]] = arrayOf(0.014, 1.0, 0.01, 87.0)
         curs[nums_cur[2]] = arrayOf(1.13, 77.0, 1.0, 0.89)
         curs[nums_cur[3]] = arrayOf(1.27, 87.0, 1.12, 1.0)
 
