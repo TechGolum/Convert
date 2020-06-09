@@ -43,9 +43,9 @@ class MainActivity : AppCompatActivity() {
         var nums_cur = arrayOf("Доллар", "Рубль", "Евро", "Фунт")
         var curs : MutableMap<String, Array<Double>> = mutableMapOf()
         curs[nums_cur[0]] = arrayOf(1.0, 74.0, 0.89, 0.79)
-        curs[nums_cur[1]] = arrayOf(0.014, 1.0, 0.01, 87.0)
+        curs[nums_cur[1]] = arrayOf(0.014, 1.0, 0.013, 87.0)
         curs[nums_cur[2]] = arrayOf(1.13, 77.0, 1.0, 0.89)
-        curs[nums_cur[3]] = arrayOf(1.27, 87.0, 1.12, 1.0)
+        curs[nums_cur[3]] = arrayOf(1.27, 0.011, 1.12, 1.0)
 
 
         changeCur.setOnClickListener {
@@ -63,7 +63,7 @@ class MainActivity : AppCompatActivity() {
             if(input.text.toString().isNotEmpty()) {
                 course = curs[inputName.text.toString()]!![nums_cur.indexOf(outputName.text.toString())]
                 output.text = (input.text.toString().toDouble() * course).toString()
-                if (output.text.length > 5) output.text = output.text.subSequence(0, 4)
+                if (output.text.length > 5 && !output.text.toString().toCharArray().contains('.')) output.text = output.text.subSequence(0, 5).toString() + "E" + (output.text.length - 5).toString()
             }
         }
 
