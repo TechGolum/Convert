@@ -63,7 +63,13 @@ class MainActivity : AppCompatActivity() {
             if(input.text.toString().isNotEmpty()) {
                 course = curs[inputName.text.toString()]!![nums_cur.indexOf(outputName.text.toString())]
                 output.text = (input.text.toString().toDouble() * course).toString()
-                if (output.text.length > 5 && !output.text.toString().toCharArray().contains('.')) output.text = output.text.subSequence(0, 5).toString() + "E" + (output.text.length - 5).toString()
+                if (output.text.length > 5)
+                {
+                    if(!output.text.toString().toCharArray().contains('.'))
+                        output.text = output.text.subSequence(0, 5).toString() + "E" + (output.text.length - 5).toString()
+                    else
+                        output.text = output.text.subSequence(0, 5).toString()
+                }
             }
         }
 
